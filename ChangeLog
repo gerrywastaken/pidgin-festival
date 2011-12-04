@@ -1,0 +1,27 @@
+pidgin-festival (2.4)
+
+  * Add patch provided by Коренберг Марк <socketpair@gmail.com> which fixes
+    - (possible) security errors (printf buffer overflow)
+    - more strings are translated!
+    - russian translation fixed.
+    - invalid character set conversion removed.
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Wed, 13 May 2009 02:44:45 -0400
+
+pidgin-festival (2.3)
+
+  * Add Russian translation, Thanks to Lupin Demid <luipn.de.mid@gmail.com>
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Wed,  6 Feb 2008 13:20:21 +0530
+
+pidgin-festival (2.2)
+
+  * Add patch by Jayen Ashar <J__n@yahoo.com> to support alsa sound method.
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Tue, 16 Oct 2007 22:08:44 +0530
+
+pidgin-festival (2.1)
+	
+  * Update code for changed API in Pidgin 2.0
+	
+ -- Varun Hiremath <varunhiremath@gmail.com>  Fri, 10 Aug 2007 13:05:51 +0530

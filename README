@@ -1,0 +1,11 @@
+Pidgin-Festival:
+===============
+Text-to-Speech for Pidgin
+
+About
+=====
+This plugin uses in the Festival Speech Synthesis System to read Pidgin conversations outloud.
+
+INSTALL
+=======
+Please see the INSTALL file

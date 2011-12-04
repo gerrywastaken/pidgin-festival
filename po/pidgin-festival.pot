@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-13 02:57-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/festival.c:138
+msgid "U R L"
+msgstr ""
+
+#: src/festival.c:358
+msgid "says"
+msgstr ""
+
+#: src/festival.c:392
+msgid "signed on"
+msgstr ""
+
+#: src/festival.c:398
+msgid "signed off"
+msgstr ""
+
+#: src/festival.c:412
+msgid "joined the conversation"
+msgstr ""
+
+#: src/festival.c:426
+msgid "left the conversation"
+msgstr ""
+
+#: src/festival.c:432
+msgid "is now away"
+msgstr ""
+
+#: src/festival.c:438
+msgid "is now back"
+msgstr ""
+
+#: src/festival.c:444
+msgid "is now idle"
+msgstr ""
+
+#: src/festival.c:450
+msgid "is now un idle"
+msgstr ""
+
+#: src/festival.c:624 src/festival.c:779
+msgid "Festival"
+msgstr ""
+
+#: src/festival.c:631
+msgid "Availables voices:"
+msgstr ""
+
+#: src/festival.c:639
+#, c-format
+msgid "Error opening voices directory: %s"
+msgstr ""
+
+#: src/festival.c:663
+#, c-format
+msgid "Error opening voice directory: %s"
+msgstr ""
+
+#. --------------- Replace URL -----------
+#: src/festival.c:701
+msgid "Replace \"http://www.someurl.com\" with URL"
+msgstr ""
+
+#. --------------- Prepend Alias -----------
+#: src/festival.c:709
+msgid "Prepend Buddy Name (Alias) to message"
+msgstr ""
+
+#. --------------- Announce Events -----------
+#: src/festival.c:717
+msgid "Announce events"
+msgstr ""
+
+#: src/festival.c:732
+msgid "Pitch"
+msgstr ""
+
+#: src/festival.c:746
+msgid "Max Length"
+msgstr ""
+
+#: src/festival.c:781
+msgid "Text-to-Speech for Pidgin"
+msgstr ""
+
+#. *  summary
+#: src/festival.c:782
+msgid ""
+"Uses in the Festival Speech Synthesis System to read Pidgin conversations "
+"outloud."
+msgstr ""

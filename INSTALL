@@ -1,0 +1,33 @@
+To Compile
+==========
+
+Untar the archive:
+
+  tar zxvf pidgin-festival-VERSION.tar.gz
+
+Run autogen
+
+  ./autogen.sh
+
+Configure:
+
+  ./configure
+
+  or to install using a custom install of Pidgin:
+
+  PKG_CONFIG_PATH=/opt/pidgin/lib/pkgconfig ./configure --prefix=/opt/pidgin
+
+As long as you haven't gotten any error messages during the configure script,
+you'll be read to compile.  To compile just type 'make':
+  
+  make
+  
+Pidgin-Festival will install to the pidgin lib directory.  This directory is
+usually /usr/local/lib/pidgin, so be sure you have write access to these
+directories, or use 'su' to become root and then run 'make install':
+
+  make install
+
+Once thats done, you are good to go.  Restart Pidgin, go into preferences, then
+to plugins.  Enable Festival.
+

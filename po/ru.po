@@ -1,0 +1,110 @@
+# Russian translation for pidgin-festival.
+# Copyright (C) 2004 Free software Foundation, Inc.
+# This file is distributed under the same license as the pidgin-festival package.
+# Tigrux <tigrux@avantel.net>, 2003
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pidgin-festival 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-13 02:57-0400\n"
+"PO-Revision-Date: 2007-12-03 20:14+0300\n"
+"Last-Translator: Lupin Demid <luipn.de.mid@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/festival.c:138
+msgid "U R L"
+msgstr "ССЫЛКА"
+
+#: src/festival.c:358
+msgid "says"
+msgstr "сказал"
+
+#: src/festival.c:392
+msgid "signed on"
+msgstr "подключился"
+
+#: src/festival.c:398
+msgid "signed off"
+msgstr "отключился"
+
+#: src/festival.c:412
+msgid "joined the conversation"
+msgstr "присоединился к чату"
+
+#: src/festival.c:426
+msgid "left the conversation"
+msgstr "покинул чат"
+
+#: src/festival.c:432
+msgid "is now away"
+msgstr "отошел"
+
+#: src/festival.c:438
+msgid "is now back"
+msgstr "вернулся"
+
+#: src/festival.c:444
+msgid "is now idle"
+msgstr "бездействует"
+
+#: src/festival.c:450
+msgid "is now un idle"
+msgstr "прекратил бездействие"
+
+#: src/festival.c:624 src/festival.c:779
+msgid "Festival"
+msgstr "Фестиваль(Festival)"
+
+#: src/festival.c:631
+msgid "Availables voices:"
+msgstr "Доступные голоса:"
+
+#: src/festival.c:639
+#, c-format
+msgid "Error opening voices directory: %s"
+msgstr "Ошибка при открытии директории с голосами: %s"
+
+#: src/festival.c:663
+#, c-format
+msgid "Error opening voice directory: %s"
+msgstr "Ошибка при открытии директории с голосом: %s"
+
+#. --------------- Replace URL -----------
+#: src/festival.c:701
+msgid "Replace \"http://www.someurl.com\" with URL"
+msgstr "Заменить \"http://www.someurl.com\" на ССЫЛКУ"
+
+#. --------------- Prepend Alias -----------
+#: src/festival.c:709
+msgid "Prepend Buddy Name (Alias) to message"
+msgstr "Добавлять имя контакта к сообщению"
+
+#. --------------- Announce Events -----------
+#: src/festival.c:717
+msgid "Announce events"
+msgstr "Сообщать о событиях"
+
+#: src/festival.c:732
+msgid "Pitch"
+msgstr "Высота тона"
+
+#: src/festival.c:746
+msgid "Max Length"
+msgstr "Максимальная длинна"
+
+#: src/festival.c:781
+msgid "Text-to-Speech for Pidgin"
+msgstr "Синтез речи для Pidgin"
+
+#. *  summary
+#: src/festival.c:782
+msgid ""
+"Uses in the Festival Speech Synthesis System to read Pidgin conversations "
+"outloud."
+msgstr ""
+"Использует систему синтеза речи Фестиваль (Festival Speech Synthesis System) "
+"для озвучивания сообщений."

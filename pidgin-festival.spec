@@ -1,0 +1,63 @@
+%define pidgin_major_ver %(echo %{pidginver} | sed -e 's/\\([[0-9]]*\\).\\([[0-9]]*\\).\\([[0-9]]*\\)/\\1/' -)
+%define pidgin_minor_ver %(echo %{pidginver} | sed -e 's/\\([[0-9]]*\\).\\([[0-9]]*\\).\\([[0-9]]*\\)/\\2/' -)
+%define pidgin_next_major_ver %(echo $((%{pidgin_major_ver}+1)))
+%define rpmrelease 0
+
+Summary:    Festival Plugin for Pidgin
+Name:       pidgin-festival
+Version:    2.4
+Release:    %{pidgin_major_ver}.%{pidgin_minor_ver}.%{rpmrelease}%{?pidgindist:.%{pidgindist}}
+License:    GPL
+Group:      Applications/Internet
+Url:        http://pidgin-festival.sourceforge.net/
+Source:     pidgin-festival-%{version}.tar.gz
+BuildRoot:  %{_tmppath}/%{name}-%{version}-root
+
+Requires:      pidgin >= 1:%{pidgin_major_ver}.%{pidgin_minor_ver}
+Conflicts:     pidgin > 1:%{pidgin_next_major_ver}
+Conflicts:     pidgin < 1:%{pidgin_major_ver}.%{pidgin_minor_ver}
+
+BuildRequires: pkgconfig, libtool, festival-devel, pidgin-devel >= 1:%{pidgin_major_ver}.%{pidgin_minor_ver}
+BuildConflicts: pidgin-devel > 1:%{pidgin_next_major_ver}, pidgin-devel < 1:%{pidgin_major_ver}.%{pidgin_minor_ver}
+
+%if "%{_vendor}" == "MandrakeSoft"
+BuildRequires: libgtk+1.2-devel, libgtk+2.0_0-devel
+%else
+BuildRequires: gtk+-devel, gtk2-devel
+%endif
+
+%description
+Pidgin Festival is a plugin for Pidgin that will read conversations outloud using the Festival Speech Synthesis System.
+
+To rebuild for a specific Pidgin version or dist tag:
+rpmbuild --rebuild pidgin-pidgin-festival-2.4-%{release}.src.rpm --define 'pidginver %{pidginver}' --define 'pidgindist %{!?pidgindist:fc1}%{?pidgindist:%{pidgindist}}'
+
+%prep
+%setup -q
+
+%build
+CFLAGS="$RPM_OPT_FLAGS" ./configure --prefix=%{_prefix}
+
+make %{?_smp_mflags}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make DESTDIR=$RPM_BUILD_ROOT install
+
+strip $RPM_BUILD_ROOT%{_libdir}/pidgin/*.so || :
+rm -f $RPM_BUILD_ROOT%{_libdir}/pidgin/festival.la $RPM_BUILD_ROOT%{_libdir}/pidgin/festival.a
+
+%find_lang %{name}
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files -f %{name}.lang
+%defattr(-, root, root)
+
+%doc README ChangeLog
+%{_libdir}/pidgin/festival.so
+
+%changelog
+* Thu Oct 14 2004 Nathan Fredrickson <nathan@silverorange.com>
+- Initial spec file based on spec from gxr plugin by Stu Tomlinson <stu@nosnilmot.com>
