@@ -33,6 +33,7 @@
 #include <time.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "pidgin.h"
 #include "debug.h"
@@ -338,6 +339,13 @@ static void
 im_recv_im(PurpleAccount *account, char *who, char *what,
 	    PurpleConversation * conv, PurpleMessageFlags flags)
 {
+  int wasPlaying = 0;
+
+  if(system("dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.IsPlaying")){
+    wasPlaying = 1;
+    system("dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.PlayPause");
+  }
+
   char *stripped;
   const char *alias = get_best_name(account, who);
   silent_joins = NULL;
@@ -369,6 +377,11 @@ im_recv_im(PurpleAccount *account, char *who, char *what,
   g_free(stripped);
 /*  if (msg_utf8) g_free(msg_utf8); */
   g_string_free(buffer,TRUE);
+
+  if(wasPlaying==1 && !system("dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.IsPlaying")){
+    sleep(5);
+    system("dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.PlayPause");
+  }
 }
 
 static void
